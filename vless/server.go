@@ -71,12 +71,12 @@ func (s *Server) Handshake(underlay net.Conn) (io.ReadWriter, *proxy.TargetAddr,
 	}
 
 	if num < 17 {
-		//fallback directly
+		
 
 		return nil, nil, errors.New("fallback, reason 1")
 
 	}
-	//proxy/vless/encoding/encoding.go DecodeRequestHeader
+	
 
 	version := auth[0]
 	if version > 1 {
@@ -121,7 +121,7 @@ func (s *Server) Handshake(underlay net.Conn) (io.ReadWriter, *proxy.TargetAddr,
 	addr := &proxy.TargetAddr{}
 
 	switch commandByte {
-	case proxy.CmdMux: //实际目前暂时v2simple还未实现mux，先这么写
+		case proxy.CmdMux: //TODO: 实际目前暂时v2simple还未实现mux，先这么写
 
 		addr.Port = 0
 		addr.Name = "v1.mux.cool"
@@ -183,7 +183,7 @@ func (s *Server) Handshake(underlay net.Conn) (io.ReadWriter, *proxy.TargetAddr,
 			ip_or_domain_bytesLength = net.IPv4len
 			addr.IP = make(net.IP, net.IPv4len)
 		case proxy.AtypDomain:
-			// 解码域名的长度
+			
 
 			var domainNameLenBytes [1]byte
 			_, err = underlay.Read(domainNameLenBytes[:])
