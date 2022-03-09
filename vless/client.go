@@ -18,7 +18,7 @@ func init() {
 }
 
 type Client struct {
-	//proxy.UDPResponseWriter //用于 把在 CRUMFURS 信道中 获取到的 未知流量 转发到 client的调用者中, 如果此项未设置，也是可以的，但是就不再支持fullcone
+	
 
 	udpResponseChan chan *proxy.UDPAddrData
 
@@ -112,7 +112,7 @@ func (c *Client) Handshake(underlay net.Conn, target *proxy.TargetAddr) (io.Read
 	}
 
 	buf := c.getBufWithCmd(cmd)
-	err = binary.Write(buf, binary.BigEndian, uint16(port)) // port
+	err = binary.Write(buf, binary.BigEndian, uint16(port)) 
 	if err != nil {
 		return nil, err
 	}
@@ -175,12 +175,12 @@ func (c *Client) WriteUDPRequest(a *net.UDPAddr, b []byte) (err error) {
 func (c *Client) getBufWithCmd(cmd byte) *bytes.Buffer {
 	v := c.version
 	buf := &bytes.Buffer{}
-	buf.WriteByte(byte(v)) //version
+	buf.WriteByte(byte(v)) 
 	buf.Write(c.user.UUID[:])
 	if v == 0 {
 		buf.WriteByte(0) //addon length
 	}
-	buf.WriteByte(cmd) // cmd
+	buf.WriteByte(cmd) 
 	return buf
 }
 
@@ -199,7 +199,7 @@ func (c *Client) handle_CRUMFURS(UMFURS_conn net.Conn) {
 			break
 		}
 		if n < 7 {
-			// 信息长度至少要为7才行。
+			
 			break
 		}
 		msg := buf_for_umfurs[:n]
