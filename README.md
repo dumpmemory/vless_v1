@@ -40,6 +40,8 @@ v2fly社区某些谨慎的人非说有协议问题，那我只好暂且把我自
 
 准确地说，原v2simple代码属于 No Lisence and can't find the author at all. 这和 No Lisence 是不同的， No Lisence 默认尊重原作者的著作权， 但是原作者完全是一个匿名账户，无法追溯实控人，所以 No Lisence 对原作者的尊重也就没法实现。尊重原作者 等价于 尊重大自然。因为原作者 在这种情况下等价于 大自然。
 
+我也是尊重原作者才fork v2simple的。这个代码原理很简单，完全可以自己重写一遍。我只是不想居功而已
+
 
 # 再说一遍
 
