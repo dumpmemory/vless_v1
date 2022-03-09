@@ -12,6 +12,9 @@ v2fly社区某些谨慎的人非说有协议问题，那我只好暂且把我自
 
 所以现在就可以直接使用我vless_v1项目的所有代码。
 
+有任何不懂的可以直接阅读我的 [v2simple](https://github.com/hahahrfool/v2simple) 代码。
+
+
 # 完全匿名的找不到实控人的没附带任何开源协议的github项目的fork问题
 
 原v2simple项目并没有附带任何开源许可证，根据下面论证，是可以fork的
