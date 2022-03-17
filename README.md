@@ -1,3 +1,6 @@
+# 本仓库文件已经过时，对vless v1的最新定义请直接查看 [verysimple仓库](https://github.com/hahahrfool/v2ray_simple/blob/main/vless_v1.md)
+
+# 详情
 提取自我的v2simple
 
 v2fly社区某些谨慎的人非说有协议问题，那我只好暂且把我自己写的代码提取出来
